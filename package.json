@@ -1,0 +1,25 @@
+{
+  "name": "felistore",
+  "version": "1.0.0",
+  "description": "Web3 hybrid e-commerce platform with ERC-20 token loyalty system",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "blockchain"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "keywords": [
+    "web3",
+    "erc20",
+    "marketplace",
+    "blockchain",
+    "loyalty"
+  ],
+  "author": "",
+  "license": "ISC"
+}
