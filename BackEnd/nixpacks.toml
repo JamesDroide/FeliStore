@@ -2,8 +2,8 @@
 nixPkgs = ["nodejs_20"]
 
 [phases.install]
-cmds = ["npm install --legacy-peer-deps"]
+cmds = ["npm install --legacy-peer-deps", "npx --yes prisma@5.20.0 generate"]
 
 [start]
-cmd = "npm run prisma:generate && npm run prisma:db:push && npm start"
+cmd = "npx --yes prisma@5.20.0 db push --accept-data-loss && node src/server.js"
 
