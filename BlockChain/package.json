@@ -1,0 +1,51 @@
+{
+  "name": "felistore-blockchain",
+  "version": "1.0.0",
+  "description": "Smart Contracts para Felistore - Plataforma Web3 de comercio electrónico",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "node": "hardhat node",
+    "node:start": "node scripts/start-local-network.js",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:testnet": "npm run deploy:sepolia",
+    "verify": "hardhat run scripts/verify.js",
+    "verify:sepolia": "hardhat run scripts/verify.js --network sepolia",
+    "mint": "node scripts/mint-tokens.js",
+    "clean": "hardhat clean"
+  },
+  "keywords": [
+    "blockchain",
+    "smart-contracts",
+    "solidity",
+    "erc20",
+    "erc721",
+    "dao",
+    "staking"
+  ],
+  "author": "Felistore Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "chai": "^4.3.7",
+    "hardhat": "^2.19.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.5",
+    "typechain": "^8.3.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.9.0"
+  }
+}
