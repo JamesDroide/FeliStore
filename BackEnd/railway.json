@@ -5,7 +5,7 @@
     "buildCommand": "npm install --legacy-peer-deps"
   },
   "deploy": {
-    "startCommand": "DATABASE_URL='postgresql://dummy' npx prisma generate && npx prisma db push --accept-data-loss && node src/server.js",
+    "startCommand": "npx prisma generate && npx prisma db push --accept-data-loss && node src/server.js",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
   }
