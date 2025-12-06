@@ -1,0 +1,9 @@
+[build]
+builder = "NIXPACKS"
+buildCommand = "cd BackEnd && npm install && npx prisma generate"
+
+[deploy]
+startCommand = "cd BackEnd && npx prisma migrate deploy && npm start"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
